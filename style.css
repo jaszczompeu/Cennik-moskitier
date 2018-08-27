@@ -1,8 +1,14 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
 .row{
-    background: rgba(0, 234, 0, 0.5);
-    height: 200px;
-    line-height: 200px;
+    background: rgb(132, 121, 103);
+    height: 100px;
+    line-height: 100px;
     width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: white;
 }
 #table{
     width: 100%;
@@ -24,6 +30,9 @@ input[type=text]{
     height: 20px;
     width: 100px;
     text-align: center;
+    border: 2px solid rgb(209, 199, 184);
+    background-color: rgb(255, 253, 250);
+    border-radius: 5px;
 
 }
 input.szt{
@@ -33,4 +42,12 @@ input.szt{
 }
 input.pop{
 
+}
+input[type=button]{
+    height: 20px;
+    width: 100px;
+    text-align: center;
+    border: 2px solid rgb(209, 199, 184);
+    background-color: rgb(255, 253, 250);
+    border-radius: 5px;    
 }
