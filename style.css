@@ -1,0 +1,36 @@
+.row{
+    background: rgba(0, 234, 0, 0.5);
+    height: 200px;
+    line-height: 200px;
+    width: 100%;
+}
+#table{
+    width: 100%;
+}
+table{
+    border: 1px solid black;
+}
+th{
+    width: 20%;
+    text-align: center;
+}
+tr:nth-child(odd){
+    background: #ddd
+}
+tr:nth-child(even){
+    background: #aaa
+}
+input[type=text]{
+    height: 20px;
+    width: 100px;
+    text-align: center;
+
+}
+input.szt{
+    height: 20px;
+    width: 50px;
+    text-align: center;
+}
+input.pop{
+
+}
