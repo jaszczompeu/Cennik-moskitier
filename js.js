@@ -32,10 +32,27 @@ $(function(){
         $(this).closest('tr').remove();
     });
 
+    $(document).on('click', '#body', function(){
+        var ck = $('.ck');
+        var cw = $('.cw');
+
+        var cenaw = 0;
+        var cenak = 0;
+
+        for(var i = 0; i < $('.ck').length; i++){
+            cenaw += parseInt(ck[i]);
+        };
+        for(var i = 0; i < $('.cw').length; i++){
+            cenak += parseInt(cw[i]);
+        };
+
+        $('.cenawytw').text(cenaw);
+        $('.cenaklient').text(cenak);
+    });
 
 });
 
 
 function dotabelki(szerokosc,tnijwys,wysokosc,tnijszer,sztuk,koszt,cena){
-    $('table tr:last').after('<tr><th>'+szerokosc+tnijwys+'</th><th>'+wysokosc+tnijszer+'</th><th>'+sztuk+'</th><th>'+koszt+'</th><th>'+cena+'</th><th><input type="button" class="delete" value="x"></th></tr>');
+    $('table tr:last').before('<tr><th>'+szerokosc+tnijwys+'</th><th>'+wysokosc+tnijszer+'</th><th>'+sztuk+'</th><th class="cw">'+koszt+'</th><th class="ck">'+cena+'</th><th><input type="button" class="delete" value="x"></th></tr>');
 }

@@ -10,7 +10,7 @@
     <script src="jquery.js"></script>
     <script src="js.js"></script>
 </head>
-<body>
+<body id="body">
     <div class="row"> Dodaj moskitierę:
         <input type="text" placeholder="szerokość" class="szer"> X
         <input type="text" placeholder="wysokość" class="wys">
@@ -21,14 +21,22 @@
 
     <div id="table">
         <table>
-            <tr>
+            <tr class="first">
                 <th>Szerokość</th>
                 <th>Wysokość</th>
                 <th>Sztuk</th>
                 <th>Cena brutto wytworzenia</th>
                 <th>Cena brutto dla klienta</th>
                 <th>Usuń</th>
-            </tr>            
+            </tr>   
+            <tr class="last">
+                <th>-</th>
+                <th>-</th>
+                <th>-</th>
+                <th class="cenawytw">-</th>
+                <th class="cenaklient">-</th>
+                <th>-</th>
+            </tr>                     
         </table>
     </div>
 </body>
