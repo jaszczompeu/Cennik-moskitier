@@ -2,7 +2,7 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .row{
-    background: rgb(132, 121, 103);
+    background: rgb(124, 142, 166);
     height: 100px;
     line-height: 100px;
     width: 100%;
@@ -20,11 +20,11 @@ th{
     width: 20%;
     text-align: center;
 }
-tr:nth-child(odd){
-    background: #ddd
-}
 tr:nth-child(even){
-    background: #aaa
+    background: #BF9A78;
+}
+tr:nth-child(odd){
+    background: #735B4D;
 }
 input[type=text]{
     height: 20px;

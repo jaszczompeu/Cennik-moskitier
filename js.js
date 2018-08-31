@@ -6,6 +6,8 @@ $(function(){
     var cenazac = 0.14;
     var cenapod = 0.07;
     var cenawie = 0.35;
+    var cenaw = 0;
+    var cenak = 0;
 
     $('.podlicz').click(function(){
         var utnijszer = "(Utnij:"+(($('.szer').val())-39)+" )";
@@ -35,16 +37,24 @@ $(function(){
     $(document).on('click', '#body', function(){
         var ck = $('.ck');
         var cw = $('.cw');
+        cenaw = 0;
+        cenak = 0;
 
-        var cenaw = 0;
-        var cenak = 0;
+        $(".ck").each(function() {
+            var value = $(this).text();
+            // add only if the value is number
+            if(!isNaN(value) && value.length != 0) {
+                cenak += parseFloat(value);
+            }
+        });
+        $(".cw").each(function() {
+            var value = $(this).text();
+            // add only if the value is number
+            if(!isNaN(value) && value.length != 0) {
+                cenaw += parseFloat(value);
+            }
+        });
 
-        for(var i = 0; i < $('.ck').length; i++){
-            cenaw += parseInt(ck[i]);
-        };
-        for(var i = 0; i < $('.cw').length; i++){
-            cenak += parseInt(cw[i]);
-        };
 
         $('.cenawytw').text(cenaw);
         $('.cenaklient').text(cenak);
