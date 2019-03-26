@@ -6,7 +6,7 @@ body{
     height: 100px;
     line-height: 100px;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 2px;
     margin-bottom: 10px;
     color: white;
 }
@@ -50,4 +50,9 @@ input[type=button]{
     border: 2px solid rgb(209, 199, 184);
     background-color: rgb(255, 253, 250);
     border-radius: 5px;    
+}
+.oferta{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }
