@@ -13,12 +13,15 @@
     <script src="js.js"></script>
 </head>
 <body id="body">
-    <div class="row"> Dodaj moskitierę:
-        <input type="text" placeholder="szerokość" class="szer"> X
-        <input type="text" placeholder="wysokość" class="wys">
-        <input type="text" placeholder="ile sztuk" class="szt">
-        Poprzeczka:<input type="checkbox" name="poprzeczka" class="pop">
-        <input type="button" value="Podlicz" class="podlicz">
+    <div class="row">
+        <div class="inner">
+            Dodaj moskitierę:
+            <input type="text" placeholder="szerokość" class="szer"> X
+            <input type="text" placeholder="wysokość" class="wys"> &nbsp;
+            <input type="text" placeholder="ile sztuk" class="szt">
+            Poprzeczka:<input type="checkbox" name="poprzeczka" class="pop">
+            <input type="button" value="Podlicz" class="podlicz">
+        </div>     
     </div>
 
     <div id="table">
@@ -40,6 +43,7 @@
             </tr>                     
         </table>
     </div>
-    <!-- <div class="oferta"><button>Drukuj ofertę</button></div> -->
+    
+   <button class="oferta">Drukuj ofertę</button>
 </body>
 </html>

@@ -78,6 +78,7 @@ $(function(){
 
 function dotabelki(szerokosc,tnijwys,wysokosc,tnijszer,sztuk,koszt,cena){
     $('table tr:last').before('<tr><th>'+szerokosc+tnijszer+'</th><th>'+wysokosc+tnijwys+'</th><th class="il">'+sztuk+'</th><th class="cw">'+koszt+'</th><th class="ck">'+cena+'</th><th><input type="button" class="delete" value="x"></th></tr>');
+    $('.szer').text(" ");
 }
 /*
 function createPDF(){

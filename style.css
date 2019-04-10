@@ -2,52 +2,66 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .row{
-    background: rgb(124, 142, 166);
+    background: rgb(6, 168, 232);
     height: 100px;
     line-height: 100px;
     width: 100%;
-    border-radius: 2px;
+    border-radius: 3px;
     margin-bottom: 10px;
     color: white;
 }
 #table{
     width: 100%;
 }
+.inner {
+    display: table;
+    margin: 0 auto;
+  }
 table{
-    border: 1px solid black;
+    border: 1px solid #182838;
+    border-radius: 3px;
 }
 th{
     width: 20%;
     text-align: center;
 }
+tr:first-child{
+    background: #182838 !important;
+    color: white;
+}
 tr:nth-child(even){
-    background: #BF9A78;
+    background: white;
+    color: black;
 }
 tr:nth-child(odd){
-    background: #735B4D;
+    background: rgb(6, 168, 232);
+    color: white;
 }
 input[type=text]{
-    height: 20px;
+    height: 40px;
     width: 100px;
     text-align: center;
-    border: 2px solid rgb(209, 199, 184);
+    border: 1px solid #182838;
     background-color: rgb(255, 253, 250);
-    border-radius: 5px;
+    border-radius: 3px;
 
 }
 input.szt{
-    height: 20px;
+    height: 40px;
     width: 50px;
     text-align: center;
+    border: 1px solid #182838;
+    background-color: rgb(255, 253, 250);
+    border-radius: 3px;
 }
 input.pop{
 
 }
 input[type=button]{
-    height: 20px;
+    height: 40px;
     width: 100px;
     text-align: center;
-    border: 2px solid rgb(209, 199, 184);
+    border: 1px solid #182838;
     background-color: rgb(255, 253, 250);
     border-radius: 5px;    
 }
@@ -55,4 +69,10 @@ input[type=button]{
     position: absolute;
     bottom: 20px;
     right: 20px;
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    border: 1px solid #182838;
+    background-color: rgb(6, 168, 232);
+    border-radius: 3px;
 }
