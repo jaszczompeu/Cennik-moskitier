@@ -44,7 +44,6 @@ input[type=text]{
     border: 1px solid #182838;
     background-color: rgb(255, 253, 250);
     border-radius: 3px;
-
 }
 input.szt{
     height: 40px;
@@ -54,9 +53,6 @@ input.szt{
     background-color: rgb(255, 253, 250);
     border-radius: 3px;
 }
-input.pop{
-
-}
 input[type=button]{
     height: 40px;
     width: 100px;
@@ -65,7 +61,7 @@ input[type=button]{
     background-color: rgb(255, 253, 250);
     border-radius: 5px;    
 }
-.oferta{
+.raport{
     position: absolute;
     bottom: 20px;
     right: 20px;
@@ -74,5 +70,8 @@ input[type=button]{
     text-align: center;
     border: 1px solid #182838;
     background-color: rgb(6, 168, 232);
-    border-radius: 3px;
+    border-radius: 3px;    
+}
+.schowane{
+    display: none;
 }

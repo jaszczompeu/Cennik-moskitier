@@ -31,11 +31,9 @@ $(function(){
         iloscsztuk += ile;
         dotabelki(szer.toFixed(3),utnijwys,wys.toFixed(3),utnijszer,ile,cenabrutto.toFixed(2),dlaklienta.toFixed(2));
     });
-
     $(document).on('click', '.delete',function(){
         $(this).closest('tr').remove();
     });
-
     $(document).on('click', '#body', function(){
         var ck = $('.ck');
         var cw = $('.cw');
@@ -43,7 +41,6 @@ $(function(){
         cenaw = 0;
         cenak = 0;
         ilesz = 0;
-
         $(".ck").each(function() {
             var value = $(this).text();
             // add only if the value is number
@@ -65,46 +62,25 @@ $(function(){
                 ilesz += parseFloat(value);
             }
         });
-
         $('.cenawytw').text(cenaw.toFixed(2));
         $('.cenaklient').text(cenak.toFixed(2));
         $('.sztuki').text(ilesz);
     });
-
-    $(document).on('click', '.oferta', createPDF);
-
+    $(document).on('click', '.raport', ukryj);
 });
 
-
 function dotabelki(szerokosc,tnijwys,wysokosc,tnijszer,sztuk,koszt,cena){
-    $('table tr:last').before('<tr><th>'+szerokosc+tnijszer+'</th><th>'+wysokosc+tnijwys+'</th><th class="il">'+sztuk+'</th><th class="cw">'+koszt+'</th><th class="ck">'+cena+'</th><th><input type="button" class="delete" value="x"></th></tr>');
+    $('table tr:last').before('<tr><th>'+szerokosc+'<i>'+tnijszer+'</i>'+'</th><th>'+wysokosc+'<i>'+tnijwys+'</i>'+'</th><th class="il">'+sztuk+'</th><th class="cw cenadlamnie">'+koszt+'</th><th class="ck">'+cena+'</th><th><input type="button" class="delete" value="x"></th></tr>');
     $('.szer').text(" ");
 }
-/*
-function createPDF(){
-    var doc = new jsPDF();
-    var doclineheightx = 20;
-    var doclineheighty = 190;
 
-    $('tr').each(function(){
-        //adding line for every tr
-        doc.line(20,doclineheightx,190,doclineheightx,190,20);
-        doc.setLineWidth(0.5);
-        doclineheightx+=20;
-        doclineheighty+=20;
-
-        //first cell and lines
-
-        doc.text 
-
-        
-        
-
-    });
-
-    
-    
-    doc.save('oferta.pdf');
-   
+function ukryj(){
+    var doskitrania = $('i');
+    var schowajkoszt = $('.cenadlamnie');
+    for(i=0; i<=$('i').length;i++){
+        doskitrania[i].classList.toggle('schowane');
+    }  
+    for(i=0; i<=$('.cenadlamnie').length;i++){
+        schowajkoszt[i].classList.toggle('schowane');
+    } 
 }
-*/ 
