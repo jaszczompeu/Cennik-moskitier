@@ -6,43 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="shortcut icon" href="faviconokno.png" />	
     <title>Moskitiery</title>
     <script src="jquery.js"></script>
     <script src="js.js"></script>
 </head>
 <body id="body">
     <div class="row">
+        <div class="naglowek">MOSKITIERY RAMKOWE</div>
         <div class="inner">
             Dodaj moskitierę:
             <input type="text" placeholder="szerokość" class="szer"> X
             <input type="text" placeholder="wysokość" class="wys"> &nbsp;
-            <input type="text" placeholder="ile sztuk" class="szt">
+            <input type="text" placeholder="ile sztuk" class="szt" value="1">
             Poprzeczka:<input type="checkbox" name="poprzeczka" class="pop">
             <input type="button" value="Podlicz" class="podlicz">
         </div>     
     </div>
-
     <div id="table">
         <table>
             <tr class="first">
                 <th>Szerokość</th>
                 <th>Wysokość</th>
                 <th>Sztuk</th>
-                <th class="cenadlamnie">Cena brutto wytworzenia</th>
-                <th>Cena brutto dla klienta</th>
-                <th>Usuń</th>
+                <th>Cena</th>
+                <th>
+                    <b class="del">Usuń</b>
+                </th>
             </tr>   
             <tr class="last">
                 <th colspan="2">Sumy </th>
                 <th class="sztuki"></th>
-                <th class="cenawytw cenadlamnie">-</th>
-                <th class="cenaklient">-</th>
-                <th> </th>
+                <th>
+                    <b class="cenaklient"></b>
+                    <i class="cenawytw"></i>
+                </th>
+                <th></th>
             </tr>                     
         </table>
     </div>
-    
    <button class="raport">Oferta / raport</button>
-   
 </body>
 </html>

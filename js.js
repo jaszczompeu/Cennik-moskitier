@@ -28,7 +28,6 @@ $(function(){
         var cenabrutto = (((obw*cenapro)+(4*cenanar)+((szer*wys)*cenasia)+(8*cenazac)+(8*cenapod)+cenawie+(obw*cenausz)+poprzeczka)*0.85)*1.23;
         cenabrutto=cenabrutto*ile;
         dlaklienta=cenabrutto*3;
-        iloscsztuk += ile;
         dotabelki(szer.toFixed(3),utnijwys,wys.toFixed(3),utnijszer,ile,cenabrutto.toFixed(2),dlaklienta.toFixed(2));
     });
     $(document).on('click', '.delete',function(){
@@ -41,28 +40,28 @@ $(function(){
         cenaw = 0;
         cenak = 0;
         ilesz = 0;
-        $(".ck").each(function() {
+        ck.each(function() {
             var value = $(this).text();
             // add only if the value is number
             if(!isNaN(value) && value.length != 0) {
                 cenak += parseFloat(value);
             }
         });
-        $(".cw").each(function() {
+        cw.each(function() {
             var value = $(this).text();
             // add only if the value is number
             if(!isNaN(value) && value.length != 0) {
                 cenaw += parseFloat(value);
             }
         });
-        $(".il").each(function() {
+        il.each(function() {
             var value = $(this).text();
             // add only if the value is number
             if(!isNaN(value) && value.length != 0) {
                 ilesz += parseFloat(value);
             }
         });
-        $('.cenawytw').text(cenaw.toFixed(2));
+        $('.cenawytw').text(" (Koszt:"+cenaw.toFixed(2)+")");
         $('.cenaklient').text(cenak.toFixed(2));
         $('.sztuki').text(ilesz);
     });
@@ -70,17 +69,12 @@ $(function(){
 });
 
 function dotabelki(szerokosc,tnijwys,wysokosc,tnijszer,sztuk,koszt,cena){
-    $('table tr:last').before('<tr><th>'+szerokosc+'<i>'+tnijszer+'</i>'+'</th><th>'+wysokosc+'<i>'+tnijwys+'</i>'+'</th><th class="il">'+sztuk+'</th><th class="cw cenadlamnie">'+koszt+'</th><th class="ck">'+cena+'</th><th><input type="button" class="delete" value="x"></th></tr>');
-    $('.szer').text(" ");
+    $('table tr:last').before('<tr><th>'+szerokosc+'<i>'+tnijszer+'</i>'+'</th><th>'+wysokosc+'<i>'+tnijwys+'</i>'+'</th><th class="il">'+sztuk+'</th><th><b class="ck">'+cena+'</b><i> (Koszt:<i class="cw">'+koszt+'</i>)</i></th><th class="del"><input type="button" class="delete" value="x"></th></tr>');
 }
 
 function ukryj(){
     var doskitrania = $('i');
-    var schowajkoszt = $('.cenadlamnie');
     for(i=0; i<=$('i').length;i++){
         doskitrania[i].classList.toggle('schowane');
-    }  
-    for(i=0; i<=$('.cenadlamnie').length;i++){
-        schowajkoszt[i].classList.toggle('schowane');
-    } 
+    }   
 }
